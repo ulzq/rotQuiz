@@ -1,0 +1,514 @@
+{
+  "html":[
+[
+  "Which attribute do you use if a <script> is supposed to be executed only after the page finished parsing / loading?",
+  "defer",
+  "waitforit"
+],[
+  "If a script should be run already while the page is still parsing / loading, which attribute do you use?",
+  "async",
+  "background",
+  "dontwait"
+],[
+  "Can the async attribute be used for inline JavaScript?",
+  "No",
+  "Yes"
+],[
+  "Before we used Unicode to represent the abundance of special characters we used a syntax to encode Umlauts etc. What are they called?",
+  "HTML-Entities.",
+  "HTML-&-Expressions",
+  "HTML-Aliens",
+  "HTML-FunkyCodes"
+],[
+  "There is an HTML-Entity that represents a non-breakable space, which is very useful for working around various text-flow issues. Which one?",
+  "&nbsp;",
+  "&space;",
+  "&spc;"
+],[
+  "Which HTML tags represent bold(ish) Text?",
+  "<strong> <b> <em>",
+  "<fat> <b> <em>",
+  "<bold> <b> <strong>",
+  "<b> <strong> <em> <verystrong>"
+],[
+  "With the introduction of SRI (Subresource Integrity) you have a new Attribute for the <script> tag, to specify a checksum for the script to be loaded, what is the name of this attribute?",
+  "integrity",
+  "hash",
+  "checksum",
+  "sha"
+],[
+  "In HTML in which section does the <meta> tag belong?",
+  "<head>"
+],[
+  "There is a <head> and <body> tag in HTML. But is there a <foot>?",
+  "No."
+],[
+  "There are two types of semantic lists containing the <li/> tags, name them.",
+  "<ol> <ul>"
+]
+
+],"css":[
+
+[
+  "How do you add an overline to the text in an HTML element using standard CSS.",
+  "text-decoration: overline;"
+],[
+  "In CSS you need to separate statements with a semicolon (;) Is this necessary for the last statement in a CSS block?",
+  "No but please do add it anyways."
+],[
+  "When you are creating a layout in HTML/CSS, you might encounter a situation where you cannot identify where paddings / margins for some elements come from, what can you do to investigate the situation.",
+  "Right click the element, select 'Inspect', then use the styles section of the inspector to see the CSS rules that are applied."
+],[
+  "Back in the day a lot of people used <table>'s in order to build column-based Layout. With CSS3 a new way was introduced, which is also capable of responsive behavior, which concept do we mean?",
+  "grid layout"
+],[
+  "I styled a <button> element, but my rule is overwritten by bootstrap which I am also using. What can I do?",
+  "Include the custom CSS after bootstrap instead of before. (order of inclusion)"
+],[
+  "I'm trying to use position: absolute, but somehow my element is positioned in relation to the page, but I want it to be positioned in relation to it's parent element. Which CSS rule(s) do I need to add to the parent element?",
+  "position: relative/absolute/fixed"
+],[
+  "Which CSS pseudo class selects the element that is marked with an #hashtag (id) in a document (think of #anchor links)?",
+  ":target"
+],[
+  "In a CSS flex-layout which which rule do you align a sibling element individually in the horizontal plane.",
+  "justify-self: ..."
+],[
+  "There is a CSS pseudo class to select and style the base element (think of rem), what is it called?",
+  ":root"
+],[
+  "Can you change the style of SVG images with CSS?",
+  "Yes"
+]
+
+],"javascript":[
+
+[
+  "In JavaScript the fat arrow function syntax allows you to keep the this-reference in lexic-context (next-best closure). If I have a plain JS document, in a Browser environment, just containing the function below, what will the value of 'this' be.\n\nconst myFunction = () => {\n  console.log(this);\n}",
+  "window",
+  "null",
+  "global",
+  "undefined"
+],[
+  "What is the equivalent of the window-object (browser) for nodejs?",
+  "global"
+],[
+  "Name the function to create an array-object from an array-like structure like a Set or an HTMLElementCollection?",
+  "Array.from()"
+],[
+  "Say I have a reference to a function (myFunction) and I want to generate a version of this function fixed to a fixed this-reference (myObject) and set the number 1 as the first argument. How do I write that?",
+  "myFunction.bind(myObject,1)",
+  "myFunction.connect(myObject,1)",
+  "myFunction.fix(myObject,1)",
+  "myFunction.bind(myObject).bind(1)"
+],[
+  "I need to call a function with a specific this-reference and I have an array of arguments for this function, what is the correct approach?",
+  "myFunction.apply(myThis,myArguments)",
+  "myFunction.call(myThis,myArguments)",
+  "myFunction(myThis,...myArguments)",
+  "myFunction.call(myThis)(...myArguments)"
+],[
+  "I want to create a callback generator for an event handler that scopes the 'item' variable into the handler, which is correct?",
+  "function(item){ return function(event){ console.log(item) } }",
+  "function(item,event){ console.log(item) }",
+  "function(event){ return function(item){ console.log(item) } }",
+  "( function(event){ console.log(item) } ).bind(event)"
+],[
+  "What does the following code print?\n  console.log( '' ? 'hello' : 'bye' );",
+  "bye"
+],[
+  "If I use Object.freeze() in order to make it immutable (unchangeable) can it be unfrozen?",
+  "No"
+],[
+  "I have a frozen  object containing the property 'list' of type Array. Can I still push elements on the array, even though the object is frozen?",
+  "Yes"
+],[
+  "What does the following expression yield?\n  [1,2,3,4].splice(2,2)",
+  "[3,4]"
+],[
+  "Which is the recommended function to extract part of a string?",
+  ".substring()",
+  ".substr()",
+  ".stringExtract()",
+  ".strstr"
+],[
+  "Which of the following functions does NOT convert a string like '1.23' into a native number",
+  "createNumber('1.23')",
+  "parseFloat('1.23')",
+  "parseInt('1.23')",
+  "Number('1.23')",
+  "JSON.parse('1.23')"
+],[
+  "Which type does ( 123.123123 ).toFixed(2) yield?",
+  "String",
+  "Number",
+  "Array",
+  "BigInt"
+],[
+  "What is the result of: Math.floor(0.3)?",
+  "0",
+  "0.3",
+  "1"
+],[
+  "Is there a debugger for nodejs, just like the Inspector in Chrome?",
+  "Yes",
+  "No"
+],[
+  "Do other languages than JavaScript support JSON too?",
+  "Yes",
+  "No"
+],[
+  "Which is NOT a valid way of getting (accessing) the first element out of an array WITHOUT removing it entirely?\n  let arr = [1,2,3]",
+  "let first = arr.shift();",
+  "let first = arr[0];",
+  "let [first] = arr;"
+],[
+  "What does the following RETURN?\n  [1,2,3].forEach( v => ´!${v}!´ )",
+  "undefined",
+  "false",
+  "['!1!','!2!','!3!']",
+  "syntax error"
+],[
+  "There is a syntax error in one line of the following program, which line?\nfunction extract(input,...args){\n  console.log[args];\n  input.substring(1,3);\n}",
+  "2"
+],[
+  "Is it possible for a class to have two 'super classes' at the same time using extends?",
+  "No",
+  "Yes"
+],[
+  "Is it necessary to call the super() function before you use any reference to 'this' in a subclass (extends ...)?",
+  "Yes",
+  "No"
+],[
+  "Can any function be a constructor just by calling it with the new keyword? For example:\nfunction MyClass(){\n  this.property = 12;\n}\nnew MyClass();",
+  "Yes",
+  "No"
+]
+
+],"nodejs":[
+
+[
+  "Which function is traditionally used for including libraries and other source files in NodeJS?",
+  "require('module')",
+  "import('module')",
+  "include('module')",
+  "require 'module'"
+],[
+  "Is require a function or a keyword?",
+  "Yes",
+  "No"
+],[
+  "Does NodeJS also come with a DOM like Chrome and the other Browsers?",
+  "No",
+  "Yes"
+],[
+  "Is it possible to access remote websites from the backend like we do with fetch in the frontend?",
+  "Yes for example with the request module, or the raw http API",
+  "No we need to ask a client to do it for us"
+]
+
+],"jsdom":[
+
+[
+  "I have 2 HTML Elements with the attribute id=\"myHeader\".\nCan I get both elements using document.getElementById(\"myHeader\")",
+  "No",
+  "Yes"
+],[
+  "What is NOT the correct way to add 2 CSS classes to an HTML-DOM-object.",
+  "el.style = 'header bold'",
+  "el.classList.value = 'header bold'",
+  "el.classList.add('header'); el.classList.add('bold');"
+],[
+  "Is it possible to set breakpoints for for certain events like onclick or onmousedown in the debugger/inspector?",
+  "Yes",
+  "No"
+],[
+  "Is it possible to use a for in/of loop in order to iterate over ANY data type that allows array access? (like data[2])",
+  "Yes",
+  "No"
+],[
+  "Is it possible to access the WebCam and Microphone using JavaScript API's in the Browser",
+  "Yes",
+  "No"
+],[
+  "Does document.querySelector(All) get rid of 90% of the actual use-cases for jQuery?",
+  "Yes",
+  "No"
+],[
+  "What is the correct way to get all Elements of css class 'headline' using only vanilla JavaScript?",
+  "document.querySelectorAll('.headline')",
+  "document.querySelector('.headline')",
+  "$('.headline')",
+  "$.find('.headline')",
+  "document.querySelector('headline')"
+],[
+  "Is it safer to use .innerText instead of .innerHTML especially when dealing with unfiltered user data?",
+  "Yes",
+  "No"
+],[
+  "Does Internet Explorer support modern JS-Syntax like fat arrow functions, class definitions or the spread operator?",
+  "No",
+  "Yes"
+],[
+  "Is it possible to create modern websites including animations without JavaScript?",
+  "Yes",
+  "No"
+],[
+  "What's the correct way to create an HTML <script> tag with vanilla JavaScript?",
+  "document.createElement('script')",
+  "document.append('<script>')",
+  "document.createScript('script')",
+  "$('<script>').appendTo(body)"
+],[
+  "Without any special modifications like fat array functions or using .bind(), what is usually the value of 'this' inside an event handler?",
+  "The DOM element the handler was registered with",
+  "The window object",
+  "The topmost DOM Element",
+  "The imaginary point where all coordinate Axis cross"
+],[
+  "Which function allows you to wait for the first of many Promises that is actually resolved?",
+  "Promise.race()",
+  "Promise.all()",
+  "Promise.firstResolved()",
+  "Promise.whateverComesFirst()"
+]
+
+],"react":[
+
+[
+  "Which one is NOT a reserved prop name for a React.Component?",
+  "title=",
+  "key=",
+  "as=",
+  "children="
+],[
+  "What is a good indicator for choosing a class extending React.Component over a function Component?",
+  "When using life-cycle functions",
+  "Just rendering some props into JSX",
+  "Using a state"
+],[
+  "What is the name of the special prop yielding the sub-components in React?",
+  "children",
+  "subComponents",
+  "kinder",
+  "subs"
+],[
+  "What is the correct way to set a default value of a prop in a functional React.Component?",
+  "function MyComponent({myProp=1234})",
+  "function MyComponent({myProp:1234})",
+  "const MyComponent = ({myProp default 1234})=>",
+  "function MyComponent({myProp@1234})"
+],[
+  "Functional components can have states too, but which function is used to create them?",
+  "const [state,setState] = React.useState({})",
+  "const [state,setState] = React.createState({})",
+  "this.state = {}",
+  "this.setState({})"
+],[
+  "With which function can you register a callback that runs when rendering a functional component, especially made for dealing with so called side-effects?",
+  "useEffect()",
+  "useSideEffect()",
+  "afterRender()",
+  "useFunction()"
+],[
+  "With useEffect, useCallback and useMemo you can specify an array of dependencies for execution. When a dependency changes, the callback function is executed. But what makes useMemo special?",
+  "If you return false a cached version of the last result is returned.",
+  "It sends a Memo to the site administrator to notify of the change.",
+  "There is no difference, it's just an alias.",
+  "useMemo uses internal optimizations to speed up rendering."
+],[
+  "Which of the following functions is NOT a hook in React?",
+  "useReact()",
+  "useCallback()",
+  "useMemo()",
+  "useEffect()"
+],[
+  "Sometimes we want a component that is responsible only for logical operations, e.g. it should not output any JSX. What would be the correct render function for this case?",
+  "render(){ return null; }",
+  "render(){}",
+  "render(){ return <null/>; }",
+  "render(){ return </>; }"
+],[
+  "JSX does not allow adjacent tags, so they need to be wrapped inside an enclosing tag. Select the JSX that is INVALID below.",
+  "return <b>Hello</b><i>world</i>",
+  "return <><b>Hello</b><i>world</i></>",
+  "return <React.Fragment><b>Hello</b><i>world</i></React.Fragment>",
+  "return <div><b>Hello</b><i>world</i></div>"
+],[
+  "With which function do classy components update their state and trigger a subsequent re-render?",
+  "this.setState()",
+  "this.useState()",
+  "this.updateState()",
+  "const [state,setState] = React.useState()"
+],[
+  "Using document.querySelector() in react projects is generally frowned upon. What method is the React way to access a JSX/HTML-DOM element?",
+  "useRef/createRef",
+  "linkElement",
+  "$()/jQuery()",
+  "Just traverse the DOM-tree manually"
+],[
+  "Can a React life-cycle function be defined as an async function?",
+  "Yes",
+  "No"
+],[
+  "When using an async life-cycle function, does react await the result of the function? (Does react wait for Promises?)",
+  "No",
+  "Yes"
+],[
+  "What is the difference between JSX beginning with a capital letter and and those not beginning with a capital letter.\n<Tag><tag>",
+  "Those with a capital letter are component calls, the other ones are plain HTML-tags",
+  "No difference"
+]
+
+],"express":[
+
+[
+  "Can express route handlers be async functions?",
+  "Yes",
+  "No"
+],[
+  "How do you access a JSON payload sent by the frontend in express?",
+  "req.body",
+  "req.params",
+  "req.query",
+  "req.json"
+],[
+  "How do you access the parameter defined in the following route in express?\n  app.get('/post/:id',...)",
+  "req.params.id",
+  "req.body.id",
+  "req.query.id",
+  "req.id"
+],[
+  "How do you access the GET query parameter 'page' in express?",
+  "req.query.page",
+  "req.body.page",
+  "req.query.page",
+  "req.query.page"
+],[
+  "What are the three parameters for an express middleware function?",
+  "request, response, next",
+  "request, response (there are only two)",
+  "req, res, app",
+  "req, res"
+],[
+  "Is a special middleware required in order to parse JSON requests in express?",
+  "Yes, for example: body-parser, express.json()",
+  "No, it works out of the box",
+  "No, JSON is not supported in express",
+  "Yes, for example express-json-body"
+],[
+  "How do you apply a middleware (use a plugin) in express.",
+  "app.use(middleware)",
+  "app.plugin(middleware)",
+  "app.apply(middleware)",
+  "express does not support middlewares"
+],[
+  "Is it possible to use express with your own instance of an http/s(2) server?",
+  "Yes",
+  "No",
+  "Only when using the fork express-plain"
+],[
+  "Can express be used with mocked incoming requests?",
+  "Yes",
+  "No",
+  "There is a special version called express-mockups"
+],[
+  "Is it possible to debug an express app using the nodejs debug tools in Chrome?",
+  "Yes, using the --inspect-brk flag on nodejs, and chrome://inspect",
+  "No"
+],[
+  "When debugging express, how can you access the nodejs debug tools in Chrome?",
+  "chrome://inspect",
+  "chrome://debugger",
+  "chrome://node",
+  "It's not possible, install node-inspector from npm"
+],[
+  "Are mongodb-client and mongoose different names for the same package?",
+  "No, mongoose is an ORM for mongodb, mongo-client is a bare client",
+  "Yes, mongodb-client was renamed and prevails for compatibility reasons.",
+  "No, there is no package called mongodb-client",
+  "What is mongodb?"
+],[
+  "Is it possible to set default values for fields in a mongoose schema?",
+  "Yes",
+  "No",
+  "Only if you do it manually before saving",
+  "Only when using the mongoose-defaults package"
+],[
+  "When using mongodb-client, the .find() method returns a cursor, but how do you get an array of all records being matched?",
+  ".toArray()",
+  ".fetchArray()",
+  "It is not possible"
+],[
+  "Is setting a query-field to 'undefined' a problem in mongodb-client?",
+  "It's a feature, it will take it literally and look for documents where the key is actually missing.",
+  "No, it's not relvant for the search",
+  "Yes the applicaiton will crash",
+  "You can do it but be sure to surround it with a try/catch block"
+]
+
+],"BDL":[
+
+[
+  "Which program do you use to get more information on other commandline programs in linux?",
+  "man",
+  "man-page-search",
+  "handbuch",
+  "helpMe"
+],[
+  "How do you reset the permissions of the primary user's home directories? (Useful after misusing sudo, e.g. sudo npm)",
+  "chown -R 1000:1000 ~/",
+  "fix-home-permissions",
+  "chgrp user /home",
+  "reset-perms"
+],[
+  "What does a single 'cd' (without arguments) do in the terminal?",
+  "cd into the current user's home folder",
+  "nothing",
+  "order soap via amazon",
+  "print the current directory"
+],[
+  "What dos the pwd command do?",
+  "print the current directory",
+  "power-charge the cpu",
+  "call the paw patrol",
+  "printer configuration"
+],[
+  "How to make a file executable? (e.g. writing your own scripts)",
+  "chmod a+x ./file",
+  "chmod executable ./file",
+  "make-script ./file",
+  "changeperms -execute ./file"
+],[
+  "How do you find the location of a program on you hard-drive?",
+  "which programName",
+  "where programName",
+  "location programName",
+  "it is not possible"
+],[
+  "There is a command that allows you to see a list of the commands you typed so far in terminal... which one?",
+  "history",
+  "command-log",
+  "hist",
+  "echo $PATH"
+],[
+  "To kill the foremost process in a unix terminal we use...",
+  "Ctrl-C",
+  "Meta-K",
+  "Alt-F4",
+  "Alt-Q"
+],[
+  "As Ctrl-C is already being used for killing processes, how do you copy selected text in most terminal emulators?",
+  "Ctrl-Shift-C",
+  "Alt-C",
+  "Meta-PrintScr",
+  "Ctrl-Pos1"
+],[
+  "When you write an '&' after a comman in the terminal it is launched in the background... how to get it back?",
+  "fg",
+  "proc-to-foreground",
+  "once it's backgrounded it's gone",
+  "Ctrl-D"
+]
+
+]}
